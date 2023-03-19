@@ -42,6 +42,18 @@ button {
   border-radius: 12px;
 }
 
+h1 {
+  font-family: var(--regularfont);
+  font-size: 25px;
+  align-self: end;
+}
+
+h2 {
+  font-family: var(--magicfont);
+  letter-spacing: 10px;
+  font-size: 30px;
+}
+/* start of areas */
 header {
   font-family: var(--magicfont);
   grid-area: header;
@@ -52,6 +64,7 @@ header {
     "search info"
     "hi info-links";
 }
+
 .icons {
   width: 30px;
 }
@@ -78,10 +91,6 @@ header {
   padding-left: 30px;
   display: flex;
   gap: 10px;
-}
-.hi h1 {
-  font-size: 35px;
-  align-self: end;
 }
 /* header right side */
 .info {
@@ -112,7 +121,6 @@ nav {
     "nav-dashboard";
 }
 .dashboard {
-  font-size: 35px;
   align-self: center;
 }
 .nav-dashboard {
@@ -137,13 +145,25 @@ main {
   margin-top: 10px;
   padding: 20px;
 }
+main h2 {
+  margin-left: 100px;
+}
+main p {
+  font-size: 12px;
+  font-style: italic;
+}
 .projects {
+  padding: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.buttons-project {
+  width: 20px;
 }
 /* project per article */
 article {
   text-align: center;
+  padding: 20px;
 }
 .calculator,
 .etch-a-sketch,
