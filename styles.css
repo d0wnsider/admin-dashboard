@@ -1,13 +1,15 @@
-@import url('https://fonts.cdnfonts.com/css/beautiful-magic');   
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
-
+@font-face {
+  font-family: 'MagicSchoolOne';
+  src: url('./images/MagicSchoolOne.ttf');
+}
 :root {
-  --magicfont: 'Beautiful Magic', 'Roboto', 'Helvetica', sans-serif;
+  --magicfont2: 'MagicSchoolOne', 'Roboto', 'Helvetica', sans-serif;
   --regularfont: 'Cinzel', serif;
   --colblue: #223164;
-  --colwhite: rgba(255, 255, 255, 0.8);
+  --colwhite: rgba(255, 255, 255, 0.9);
   --colbrown: #cdb373;
-  --colbrown2: rgba(205, 179, 115, .4);
+  --colbrown2: rgba(200, 180, 100, .4);
   --colgrey: rgba(80, 80, 80, 0.3);
   --main: #0F1D4A;
   --button: rgba(15, 29, 74, .3);
@@ -33,7 +35,7 @@ body {
     "nav main section"
     "nav footer section";
 }
-
+/* start of tag selectors */
 p {font-size: 12px;}
 
 a , a:visited {
@@ -45,21 +47,32 @@ a:hover {
   background-color: var(--colbrown2);
 }
 button {
-  background-color: transparent;
   border-radius: 12px;
+  background-color: transparent;
+  border-bottom-left-radius: 1px solid var(--colbrown2);
+  border-bottom-right-radius: 1px solid var(--colbrown2);
+  border: 1px solid var(--colbrown2);
+}
+
+button:hover {
+  background-color: var(--colbrown2)
+}
+
+button:active {
+  background-color: var(--colbrown)
 }
 
 h1 {
   font-family: var(--regularfont);
   font-size: 25px;
-  border-bottom: 1px solid var(--colbrown);
+  border-bottom: 3px solid var(--main);
   align-self: end;
 }
 
 h2 {
-  font-family: var(--magicfont);
+  font-family: var(--magicfont2);
   letter-spacing: 10px;
-  font-size: 30px;
+  font-size: 50px;
   text-shadow: 7px 5px rgba(0, 0, 0, .5);
 }
 /* start of areas */
@@ -79,12 +92,22 @@ header {
 .search {
   grid-area: search;
   display: flex;
+  gap: 10px;
   place-self: center;
   padding: 10px;
 }
-.search-bar {
+.search-icon {
+  width: 20px;
+}
+input {
   width: 500px;
   background-color: rgba(1, 1, 1, .1);
+  color: var(--colwhite);
+  border: 1px solid transparent;
+  outline: transparent;
+}
+input:focus {
+  border: 1px solid var(--colbrown);
 }
 .raven {width: 80px;}
 .img-search {width: 30px;}
@@ -98,7 +121,11 @@ header {
 /* header right side */
 .info {
   grid-area: info;
-  place-self: center;
+  font-family: var(--regularfont);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
 }
 .info-links {
   grid-area: info-links;
@@ -110,13 +137,11 @@ header {
 }
 .button-info-links {
   padding: 10px 15px;
-  font-family: var(--regularfont);
-  background-color: var(--button);
+  background-color: var(--main);
   color: var(--colwhite);
 }
 
 nav {
-  background-color: var(--main);
   grid-area: nav;
 }
 .nav-dashboard {
@@ -125,15 +150,15 @@ nav {
   top: 0px;
   display: grid;
   gap: 30px;
-  background-color: var(--colgrey);
-  border-top: 1px solid var(--colbrown);
+  background-color: var(--main);
+  border-top: 3px solid var(--colbrown);
   border-bottom: 1px solid var(--colbrown);
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   box-shadow: 10px 20px 30px rgba(0, 0, 0, .3);
 }
 .nav-dashboard h2 {
-  font-family: var(--magicfont);
+  border-bottom: 3px solid var(--colblue);
 }
 .nav-dashboard a {
   font-size: 13px;
@@ -149,7 +174,11 @@ main {
   padding: 20px;
 }
 main h2 {
-  /* margin-bottom: 20px; */
+  font-size: 60px;
+  margin-bottom: 10px;
+  padding-left: 50px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--colbrown);
 }
 main p {font-style: italic;}
 .projects {
@@ -157,7 +186,9 @@ main p {font-style: italic;}
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 15px;
 }
-.buttons-project {width: 20px;}
+.buttons-project {
+  width: 18px;
+}
 /* project per article */
 article {
   text-align: center;
@@ -169,14 +200,19 @@ article {
   box-shadow: 50px 0px 20px rgba(0, 0, 0, .3);
   padding: 20px;
 }
+.proj:hover{
+  transform: translate(0, 10px);
+  transition: 0.25s;
+  transition-timing-function: ease-out;
+}
 .calculator,
 .etch-a-sketch,
 .rock-paper-scissors,
 .sign-up-form,
 .landing-page,
 .-odin-recipes {
-  width: 150px;
-  height: 200px;
+  width: 250px;
+  height: 300px;
 }
 
 article button {width: 30px;}
@@ -192,6 +228,8 @@ aside h2 {padding-bottom: 10px;}
 .announcements, .trending{
   padding: 20px;
   background-color: var(--main);
+  border-top: 2px solid var(--colbrown);
+  border-bottom: 1px solid var(--colbrown);
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   box-shadow: 50px 0px 20px rgba(0, 0, 0, .3);
@@ -218,6 +256,9 @@ aside h2 {padding-bottom: 10px;}
 footer {
   grid-area: footer;
   place-self: center;
+}
+footer a:hover {
+  background-color: transparent;
 }
 .logo {
   width: 30px;
