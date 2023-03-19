@@ -7,131 +7,159 @@
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
-    <div class="header-left">
-      <div>
-        <img>
-        <h1>Hi I'm d0wnsider</h1>
-      </div>
-      <div class="header-right">
-        <div>
-          <svg>notif icon</svg>
-          <img>
-          <p>Justin Samson</p>
-        </div>
-        <div>
-          <button>New</button>
-          <button>Upload</button>
-          <button>Share</button>
-        </div>
-      </div>
+    <div class="search">
+      <button><img class="search-icon" src="./images/magnify.svg" alt="search icon"></button>
+      <form action="">
+        <label for="search-bar-form"></label>
+        <input class="search-bar"id="search-bar-form" type="text">
+      </form>
+    </div>
+    <div class="hi">
+      <img class="raven" src="images/Crow-Silhouette-No-Eye.svg">
+      <h1>Hello d0wnsider</h1>
+    </div>
+    <div class="info">
+      <button><img class="icons" src="./images/bell-badge-outline.svg" alt="notification icon"></button>
+      <button><img class="icons" src="./images/account-box-outline.svg" alt="profile icon"></button>
+      <p>d0wnsider</p>
+    </div>
+    <div class="info-links">
+      <button class="button-info-links">New</button>
+      <button class="button-info-links">Upload</button>
+      <button class="button-info-links">Share</button>
     </div>
   </header>
   <hr>
-  <main>
-    <h2>Your Projects</h2>
-    <article>
-      <h3>Calculator</h3>
-      <p>blablabla</p>
-      <button></button>
-      <button></button>
-      <button></button>
-    </article>
-    <article>
-      <h3>Ethc-A-Sketch</h3>
-      <p>blablabla</p>
-      <button></button>
-      <button></button>
-      <button></button>
-    </article>
-    <article>
-      <h3>Rock Paper Scissors</h3>
-      <p>blablabla</p>
-      <button></button>
-      <button></button>
-      <button></button>
-    </article>
-    <article>
-      <h3>Sign Up Form</h3>
-      <p>blablabla</p>
-      <button></button>
-      <button></button>
-      <button></button>
-    </article>
-    <article>
-      <h3>Landing Page</h3>
-      <p>blablabla</p>
-      <a></a>
-      <a></a>
-      <a></a>
-    </article>
-    <article>
-      <h3>Odin Recipes</h3>
-      <p>blablabla</p>
-      <button></button>
-      <button></button>
-      <button></button>
-    </article>
-  </main>
   <nav>
-    <h2>Dashboard</h2>
-    <div>
-      <a href="#"><svg></svg>Home</a>
-      <a href="#"><svg></svg>Profile</a>
-      <a href="#"><svg></svg>Messages</a>
-      <a href="#"><svg></svg>History</a>
-      <a href="#"><svg></svg>Tasks</a>
-      <a href="#"><svg></svg>Communities</a>
-    </div>
-    <div>
-      <a href="#"><svg></svg>Settings</a>
-      <a href="#"><svg></svg>Support</a>
-      <a href="#"><svg></svg>Privacy</a>
+    <div class="nav-dashboard">
+      <h2>Dashboard</h2>
+      <a class="cursor" href="#"><img class="icons" src="./images/icons8-hogwarts-100.png"></img>Home</a>
+      <a class="cursor" href="#"><img class="icons" src="./images/auto-fix.svg"></img>Profile</a>
+      <a class="cursor" href="#"><img class="icons" src="./images/message.svg"></img>Messages</a>
+      <a class="cursor" href="#"><img class="icons" src="./images/cogs.svg"></img>Settings</a>
+      <a class="cursor" href="#"><img class="icons" src="./images/face-agent.svg"></img>Support</a>
     </div>
   </nav>
-  <section>
-    <h2>Announcements</h2>
-    <article>
-      <h3>Site Maintenance</h3>
-      <p></p>
-    </article>
-    <article>
-      <h3>Community Share Day</h3>
-      <p></p>
-    </article>
-    <article>
-      <h3>Updated Privacy Policy</h3>
-      <p></p>
-    </article>
-  </section>
-  <section>
-    <h2>Trending</h2>
-    <nav>
-      <a href="#">
-        <svg>dogicon</svg>
-        <p>@tegan</p>
-        <p>World Peace Builder</p>
-      </a>
-      <a href="#">
-        <svg>coolicon</svg>
-        <p>@morgan</p>
-        <p>Super Cool Project</p>
-      </a>
-      <a href="#">
-        <svg>kendallicon</svg>
-        <p>@kendall</p>
-        <p>Life Changing App</p>
-      </a>
-      <a href="#">
-        <svg>penguinicon</svg>
-        <p>@alex</p>
-        <p>No Traffic Maker</p>
-      </a>
-    </nav>
-  </section>
+
+  <main>
+    <h2>Projects</h2>
+    <div class="projects">
+      <article class="proj">
+        <a href="https://d0wnsider.github.io/calculator/">
+          <img class="calculator" src="./images/calculator.png"></img>
+          <h3>Calculator</h3>
+        </a>
+        <p>Mathematics!</p>
+        <button class="buttons-project"><img src="./images/star-plus-outline.svg"></img></button>
+        <button class="buttons-project"><img src="./images/eye-plus-outline.svg"></img></button>
+        <button class="buttons-project"><img src="./images/link-variant.svg"></img></button>
+      </article>
+      <article class="proj">
+        <a href="https://d0wnsider.github.io/etch-a-sketch/">
+          <img class="etch-a-sketch" src="./images/etch-a-sketch.png"></img>
+          <h3>Etch-A-Sketch</h3>
+        </a>
+        <p>Draw anything!</p>
+        <button class="buttons-project"><img src="./images/star-plus-outline.svg"></img></button>
+        <button class="buttons-project"><img src="./images/eye-plus-outline.svg"></img></button>
+        <button class="buttons-project"><img src="./images/link-variant.svg"></img></button>
+      </article>
+      <article class="proj">
+        <a href="https://d0wnsider.github.io/rock-paper-scissors/">
+          <img class="rock-paper-scissors" src="./images/rockpaperscissors.png"></img>
+          <h3>Rock Paper Scissors</h3>
+        </a>
+        <p>jang ken pon!</p>
+        <button class="buttons-project"><img src="./images/star-plus-outline.svg"></img></button>
+        <button class="buttons-project"><img src="./images/eye-plus-outline.svg"></img></button>
+        <button class="buttons-project"><img src="./images/link-variant.svg"></img></button>
+      </article>
+      <article class="proj">
+        <a href="https://d0wnsider.github.io/sign-up-form/">
+          <img class="sign-up-form" src="./images/signupform.png"></img>
+          <h3>Sign Up Form</h3>
+        </a>
+        <p>Sign-Up!</p>
+        <button class="buttons-project"><img src="./images/star-plus-outline.svg"></img></button>
+        <button class="buttons-project"><img src="./images/eye-plus-outline.svg"></img></button>
+        <button class="buttons-project"><img src="./images/link-variant.svg"></img></button>
+      </article>
+      <article class="proj">
+        <a href="https://d0wnsider.github.io/landing-page/">
+          <img class="sign-up-form" src="./images/landingpage.png"></img>
+          <h3>landing page</h3>
+        </a>
+        <p>landing page!</p>
+        <button class="buttons-project"><img src="./images/star-plus-outline.svg"></img></button>
+        <button class="buttons-project"><img src="./images/eye-plus-outline.svg"></img></button>
+        <button class="buttons-project"><img src="./images/link-variant.svg"></img></button>
+      </article>
+      <article class="proj">
+        <a href="https://d0wnsider.github.io/odin-recipes/">
+          <img class="sign-up-form" src="./images/odinrecipes.png"></img>
+          <h3>Odin Recipes</h3>
+        </a>
+        <p>Pinoy Recipes!</p>
+        <button class="buttons-project"><img src="./images/star-plus-outline.svg"></img></button>
+        <button class="buttons-project"><img src="./images/eye-plus-outline.svg"></img></button>
+        <button class="buttons-project"><img src="./images/link-variant.svg"></img></button>
+      </article>
+    </div>
+  </main>
+
+  <aside>
+    <section class="announcements">
+      <h2>Announcements</h2>
+      <article>
+        <h3>Site Maintenance</h3>
+        <p>kalsd jfhk asjdf laksjdhfk lasjdh faksdf kjkhasd fkjhasdfj djf jsdhf jhdsfa jhasd fjhas djas jhas d</p>
+      </article>
+      <article>
+        <h3>Community Share Day</h3>
+        <p>kalsd jfhk asjdf laksjdhfk lasjdh faksdf kjkhasd fkjhasdfj djf jsdhf jhdsfa jhasd fjhas djas jhas d</p>
+      </article>
+      <article>
+        <h3>Updated Privacy Policy</h3>
+        <p>kalsd jfhk asjdf laksjdhfk lasjdh faksdf kjkhasd fkjhasdfj djf jsdhf jhdsfa jhasd fjhas djas jhas d</p>
+      </article>
+    </section>
+
+    <section class="trending">
+      <h2>Trending</h2>
+        <div class="trending-box">
+          <a href="#">
+            <img class="icons" src="./images/icons8-gryffindor.svg"></img>
+            <p>@gryffindor | Bravery</p>
+          </a>
+        </div>
+        <div class="trending-box">
+          <a href="#">
+            <img class="icons" src="./images/icons8-slytherin.svg"></img>
+            <p>@slytherin | Ambition</p>
+          </a>
+        </div>
+        <div class="trending-box">
+          <a href="#">
+            <img class="icons" src="./images/icons8-ravenclaw.svg"></img>
+            <p>@ravenclaw | Intelligence</p>
+          </a>
+        </div>
+        <div class="trending-box">
+          <a href="#">
+            <img class="icons" src="./images/icons8-hufflepuff.svg"></img>
+            <p>@hupplepuff | Empathy</p>
+          </a>
+        </div>
+    </section>
+  </aside>
+
   <footer>
-    <p>github logo?</p>
+    <a href="https://www.github.com/d0wnsider">
+      <img class="logo" src="./images/d0wnsiderlogo.png">
+    </a>
   </footer>
 </body>
 </html>
