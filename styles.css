@@ -7,6 +7,7 @@
   --colblue: #223164;
   --colwhite: rgba(255, 255, 255, 0.8);
   --colbrown: #cdb373;
+  --colbrown2: rgba(205, 179, 115, .3);
   --colgrey: rgba(93, 93, 93, 0.5);
   --button: #0F1D4A;
 }
@@ -15,11 +16,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* overflow: hidden; */
 }
 
 body {
-  padding: 20px;
+  padding: 0px 20px;
   background-color: var(--colblue);
   color: var(--colwhite);
   font-family: var(--regularfont);
@@ -33,15 +33,16 @@ body {
     "nav footer section";
 }
 
-p {
-  font-size: 12px;
-}
+p {font-size: 12px;}
 
 a , a:visited {
   color: var(--colwhite);
   text-decoration: none;
 }
-
+a:hover {
+  cursor: url(./images/magic\ wand.cur), auto;
+  background-color: var(--colbrown2);
+}
 button {
   background-color: transparent;
   border-radius: 12px;
@@ -71,9 +72,7 @@ header {
     "hi info-links";
 }
 
-.icons {
-  width: 30px;
-}
+.icons { width: 30px;}
 /* header left side */
 .search {
   grid-area: search;
@@ -85,12 +84,8 @@ header {
   width: 500px;
   background-color: rgba(1, 1, 1, .1);
 }
-.raven {
-  width: 80px;
-}
-.img-search {
-  width: 30px;
-}
+.raven {width: 80px;}
+.img-search {width: 30px;}
 .hi {
   grid-area: hi;
   align-self: center;
@@ -108,6 +103,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
 }
 .button-info-links {
@@ -120,14 +116,11 @@ header {
 nav {
   background-color: var(--colgrey);
   grid-area: nav;
-  display: grid;
-  grid-template-rows: 200px;
-  grid-template-areas:
-    "nav-dashboard";
 }
 .nav-dashboard {
-  grid-area: nav-dashboard;
   padding: 30px;
+  position: sticky;
+  top: 0px;
   display: grid;
   gap: 30px;
 }
@@ -146,20 +139,14 @@ main {
   margin-top: 10px;
   padding: 20px;
 }
-main h2 {
-  margin-left: 100px;
-}
-main p {
-  font-style: italic;
-}
+main h2 {margin-left: 100px;}
+main p {font-style: italic;}
 .projects {
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.buttons-project {
-  width: 20px;
-}
+.buttons-project {width: 20px;}
 /* project per article */
 article {
   text-align: center;
@@ -175,9 +162,7 @@ article {
   height: 200px;
 }
 
-article button {
-  width: 30px;
-}
+article button {width: 30px;}
 /* start of right side */
 aside {
   text-align: center;
@@ -186,10 +171,7 @@ aside {
   flex-direction: column;
   gap: 20px;
 }
-aside h2 {
-  padding-bottom: 10px;
-
-}
+aside h2 {padding-bottom: 10px;}
 .announcements, .trending{
   padding: 20px;
   border: 1px solid var(--colbrown);
