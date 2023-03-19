@@ -7,9 +7,10 @@
   --colblue: #223164;
   --colwhite: rgba(255, 255, 255, 0.8);
   --colbrown: #cdb373;
-  --colbrown2: rgba(205, 179, 115, .3);
-  --colgrey: rgba(93, 93, 93, 0.5);
+  --colbrown2: rgba(205, 179, 115, .4);
+  --colgrey: rgba(93, 93, 93, 0.3);
   --button: #0F1D4A;
+  --main: rgba(15, 29, 74, .3);
 }
 
 * {
@@ -58,7 +59,7 @@ h2 {
   font-family: var(--magicfont);
   letter-spacing: 10px;
   font-size: 30px;
-  border-bottom: 1px solid var(--colbrown);
+  border-bottom: 2px solid var(--colbrown);
 }
 /* start of areas */
 header {
@@ -114,7 +115,7 @@ header {
 }
 
 nav {
-  background-color: var(--colgrey);
+  background-color: var(--button);
   grid-area: nav;
 }
 .nav-dashboard {
@@ -129,6 +130,8 @@ nav {
 }
 .nav-dashboard a {
   font-size: 13px;
+  border-bottom: 1px solid var(--colbrown);
+  border-bottom-right-radius: 30px;
   display: flex;
   gap: 15px;
   align-items: center;
@@ -139,17 +142,24 @@ main {
   margin-top: 10px;
   padding: 20px;
 }
-main h2 {margin-left: 100px;}
+main h2 {
+  /* margin-bottom: 20px; */
+}
 main p {font-style: italic;}
 .projects {
-  padding: 20px;
+  background-color: var(--main);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
 }
 .buttons-project {width: 20px;}
 /* project per article */
 article {
   text-align: center;
+  background-color: var(--colgrey);
+  border-bottom: 1px solid var(--colbrown);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   padding: 20px;
 }
 .calculator,
@@ -175,14 +185,25 @@ aside h2 {padding-bottom: 10px;}
 .announcements, .trending{
   padding: 20px;
   border: 1px solid var(--colbrown);
-  background-color: var(--colgrey);
+  background-color: var(--button);
   border-radius: 15px;
+}
+.announcements {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .trending-box a {
   padding: 10px;
+  margin-bottom: 3px;
+  border-bottom-left-radius: 30px;
+  background-color: var(--colgrey);
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.trending-box a:hover {
+  background-color: var(--colbrown2);
 }
 footer {
   grid-area: footer;
