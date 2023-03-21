@@ -35,15 +35,14 @@ body {
     "nav main section"
     "nav footer section";
 }
-/* start of tag selectors */
-p {font-size: 12px;}
+/* TYPE SELECTORS */
+p {font-size: 13px;}
 
 a , a:visited {
   color: var(--colwhite);
   text-decoration: none;
 }
 a:hover {
-  cursor: url(./images/magic\ wand.cur), auto;
   background-color: var(--colbrown2);
 }
 button {
@@ -73,9 +72,12 @@ h2 {
   font-family: var(--magicfont2);
   letter-spacing: 10px;
   font-size: 50px;
-  text-shadow: 7px 5px rgba(0, 0, 0, .5);
+  text-shadow: 2px 4px 1px var(--colbrown);
 }
-/* start of areas */
+h3 {
+  color: var(--colbrown);
+}
+/* GRID PAGE LAYOUT */
 header {
   font-family: var(--magicfont);
   grid-area: header;
@@ -86,9 +88,23 @@ header {
     "search info"
     "hi info-links";
 }
-
-.icons { width: 30px;}
-/* header left side */
+/* SVGS COLORS */
+.icons { 
+  width: 20px;
+  height: 20px;
+  fill: var(--colwhite);
+}
+.house {
+  width: 30px;
+  height: 30px;
+}
+.project-icons {
+  width: 20px;
+  height: 20px;
+  fill: var(--colwhite);
+}
+.wand {cursor: url(./images/magic\ wand.cur), auto;}
+/* HEADER LEFT SIDE */
 .search {
   grid-area: search;
   display: flex;
@@ -118,7 +134,7 @@ input:focus {
   display: flex;
   gap: 10px;
 }
-/* header right side */
+/* HEADER RIGHT SIDE */
 .info {
   grid-area: info;
   font-family: var(--regularfont);
@@ -140,7 +156,7 @@ input:focus {
   background-color: var(--main);
   color: var(--colwhite);
 }
-
+/* LINKS */
 nav {
   grid-area: nav;
 }
@@ -168,6 +184,7 @@ nav {
   gap: 15px;
   align-items: center;
 }
+/* MAIN PAGE CONTENT */
 main {
   grid-area: main;
   margin-top: 10px;
@@ -186,10 +203,10 @@ main p {font-style: italic;}
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 15px;
 }
-.buttons-project {
-  width: 18px;
+.buttons-project:hover {
+  background-color: var(--main);
 }
-/* project per article */
+/* PROJECT PER ARTICLE */
 article {
   text-align: center;
   background-color: var(--colgrey);
@@ -216,7 +233,7 @@ article {
 }
 
 article button {width: 30px;}
-/* start of right side */
+/* SIDEBAR RIGHT SIDE */
 aside {
   text-align: center;
   grid-area: section;
